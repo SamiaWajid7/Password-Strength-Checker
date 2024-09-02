@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f0e5ff 25%, #e9ecef 25%, #e9ecef 50%, #f0e5ff 50%, #f0e5ff 75%, #e9ecef 75%);
+    background-size: 28.28px 28.28px;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+.container header {
+    background-color: #9d78f4;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: -30px -30px 20px -30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.bold-text{
+    font-weight: bold;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f7f7f7;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #9d78f4;
+    box-shadow: 0 0 5px rgba(157, 120, 244, 0.5);
+}
+
+.password-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%; /* Ensure the wrapper takes full width */
+
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: flex-start; /* Align checkbox to the left */
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.strength {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.suggestions {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: left;
+    color: #555;
+}
+
+.suggestions li {
+    margin-top: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.suggestions li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #9d78f4;
+}
+
+.strength.weak {
+    color: #e74c3c;
+}
+
+.strength.medium {
+    color: #f39c12;
+}
+
+.strength.strong {
+    color: #27ae60;
+}
+.verystrong {
+    color: rgb(22, 123, 22);
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        width: 80%; /* Adjust container width for smaller screens */
+    }
+
+    .container header {
+        padding: 10px;
+        font-size: 20px; /* Adjust header font size */
+        margin: -20px -20px 15px -20px; /* Adjust margin to fit smaller screens */
+    }
+    
+    input[type="password"],
+    input[type="text"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .strength {
+        font-size: 16px;
+    }
+
+    .suggestions {
+        font-size: 12px;
+    }
+}
