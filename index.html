@@ -9,15 +9,22 @@
 <body>
     <div class="container">
         <header>Password Strength Checker</header>
+        <!-- Instruction text for the user -->
         <p class="bold-text">Enter a password to check its strength:</p>
+        <!-- Password input field -->
         <div class="password-wrapper">
         <input type="text" id="password" placeholder="Enter your password">
+            
+        <!-- Checkbox to toggle password visibility -->
         <div class="checkbox-wrapper">
             <input type="checkbox" id="togglePassword"  checked>
             <label for="togglePassword">Show Password</label>
         </div>
     </div>
+         <!-- Display for password strength message -->
         <div id="strengthMessage" class="strength"></div>
+        
+        <!-- List for displaying password strength suggestions -->
         <ul id="suggestions" class="suggestions"></ul>
     </div>
 
